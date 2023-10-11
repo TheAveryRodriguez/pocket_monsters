@@ -8,8 +8,6 @@ RSpec.describe "trainer index page" do
 
       visit "/trainers"
 
-      save_and_open_page
-
       expect(page).to have_content("Name: #{@trainer1.name}")
       expect(page).to have_content("Name: #{@trainer2.name}")
     end
