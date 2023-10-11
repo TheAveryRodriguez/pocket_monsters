@@ -9,8 +9,6 @@ RSpec.describe "pocket monsters index page" do
 
       visit "/pocket_monsters"
 
-      save_and_open_page
-
       expect(page).to have_content("Name: #{@pocket_monster1.name}")
       expect(page).to have_content("Level: #{@pocket_monster1.level}")
       expect(page).to have_content("Captured: #{@pocket_monster1.captured}")
