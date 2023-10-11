@@ -224,6 +224,8 @@
           null,
           1,
           1,
+          1,
+          1,
           null
         ]
       },
@@ -233,45 +235,12 @@
           null
         ]
       },
-      "/Users/theaveryrodriguez/turing_work/2mod/projects/new_relational_rails/pocket_monsters/spec/features/trainers/show_spec.rb": {
+      "/Users/theaveryrodriguez/turing_work/2mod/projects/new_relational_rails/pocket_monsters/spec/features/pocket_monsters/show_spec.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
+
         ]
       },
-      "/Users/theaveryrodriguez/turing_work/2mod/projects/new_relational_rails/pocket_monsters/spec/models/pocket_monster_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/theaveryrodriguez/turing_work/2mod/projects/new_relational_rails/pocket_monsters/app/models/pocket_monster.rb": {
+      "/Users/theaveryrodriguez/turing_work/2mod/projects/new_relational_rails/pocket_monsters/app/models/trainer.rb": {
         "lines": [
           1,
           1,
@@ -289,24 +258,7 @@
           null
         ]
       },
-      "/Users/theaveryrodriguez/turing_work/2mod/projects/new_relational_rails/pocket_monsters/spec/models/trainer_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/theaveryrodriguez/turing_work/2mod/projects/new_relational_rails/pocket_monsters/app/models/trainer.rb": {
+      "/Users/theaveryrodriguez/turing_work/2mod/projects/new_relational_rails/pocket_monsters/app/models/pocket_monster.rb": {
         "lines": [
           1,
           1,
@@ -317,13 +269,9 @@
           null
         ]
       },
-      "/Users/theaveryrodriguez/turing_work/2mod/projects/new_relational_rails/pocket_monsters/app/controllers/trainers_controller.rb": {
+      "/Users/theaveryrodriguez/turing_work/2mod/projects/new_relational_rails/pocket_monsters/app/controllers/pocket_monsters_controller.rb": {
         "lines": [
           1,
-          1,
-          1,
-          null,
-          null,
           1,
           1,
           null,
@@ -337,6 +285,6 @@
         ]
       }
     },
-    "timestamp": 1697054892
+    "timestamp": 1697066543
   }
 }
