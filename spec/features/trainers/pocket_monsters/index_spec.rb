@@ -5,6 +5,7 @@ RSpec.describe "trainer pocket monsters index" do
     @trainer1 = Trainer.create(name: "Ash", age: 21, leader: true)
     @pocket_monster1 = PocketMonster.create(name: "Pikachu", level: 100, captured: true, trainer_id: @trainer1.id)
     @pocket_monster2 = PocketMonster.create(name: "Charizard", level: 99, captured: true, trainer_id: @trainer1.id)
+    @pocket_monster3 = PocketMonster.create(name: "Greninja", level: 98, captured: true)
 
     visit "/trainers/#{@trainer1.id}/pocket_monsters"
   end
@@ -17,6 +18,8 @@ RSpec.describe "trainer pocket monsters index" do
       expect(page).to have_content("Name: #{@pocket_monster2.name}")
       expect(page).to have_content("Level: #{@pocket_monster2.level}")
       expect(page).to have_content("Captured: #{@pocket_monster2.captured}")
+
+      expect(page).to have_no_content("Name: #{@pocket_monster3.name}")
     end
   end
 end

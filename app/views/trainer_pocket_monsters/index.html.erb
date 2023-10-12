@@ -1,0 +1,8 @@
+<h1>Trainer's Pocket Monsters Index</h1>
+
+<% @trainer.pocket_monsters.each do |pocket_monster|%>
+   <h3><%= "Name: #{pocket_monster.name}" %></h3>
+   <h3><%= "Level: #{pocket_monster.level}" %></h3>
+   <h3><%= "Captured: #{pocket_monster.captured}" %></h3>
+   <br>
+<% end %>
