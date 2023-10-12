@@ -19,6 +19,9 @@ RSpec.describe "trainer index page" do
       @trainer2 = Trainer.create(name: "Blue", age: 28, leader: true)
 
       visit "/trainers"
+
+      expect(page).to have_content("Name: #{@trainer1.name}")
+      expect(page).to have_content("Name: #{@trainer2.name}")
     end
   end
 end
