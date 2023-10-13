@@ -17,9 +17,22 @@ RSpec.describe "trainer show" do
       expect(page).to have_content("Leader: #{@trainer1.leader}")
     end
   end
+
   describe "US 7 - trainers show page" do
     it "I see the count of the number of pocket monsters associated with this parent" do
       expect(page).to have_content("Pocket Monsters Count: 3")
+    end
+  end
+
+  describe "US 10 - Trainer PM Index Link" do
+    describe "when I visit a trainers show page" do
+      it "I see a link to take me to that trainers" do
+        expect(page).to have_link("This trainer's pocket monsters")
+
+        click_link("This trainer's pocket monsters")
+
+        expect(page).to have_current_path("/trainers/#{@trainer1.id}/pocket_monsters")
+      end
     end
   end
 end

@@ -9,6 +9,7 @@ RSpec.describe "trainer pocket monsters index" do
 
     visit "/trainers/#{@trainer1.id}/pocket_monsters"
   end
+
   describe "US 5- when i visit /trainers/:trainer_id/pocket_monsters" do
     it "I see each pocket monster record associated with that trainer" do
       expect(page).to have_content("Name: #{@pocket_monster1.name}")
