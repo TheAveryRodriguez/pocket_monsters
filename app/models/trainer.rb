@@ -11,4 +11,8 @@ class Trainer < ApplicationRecord
   def self.recently_created
     order(created_at: :desc)
   end
+
+  def monsters_count
+    pocket_monsters.count
+  end
 end
