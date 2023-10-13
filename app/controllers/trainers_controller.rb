@@ -16,6 +16,11 @@ class TrainersController < ApplicationController
     redirect_to "/trainers"
   end
 
+  def edit
+    @trainer = Trainer.find(params[:id])
+    render :edit
+  end
+
   private
 
   def trainer_params

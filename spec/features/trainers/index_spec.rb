@@ -48,7 +48,7 @@ RSpec.describe "trainer index page" do
           fill_in "Age", with: 18
           fill_in "Leader", with: "true"
 
-          click_button "Create Trainer"
+          click_button "Submit"
 
           expect(page).to have_current_path("/trainers")
           expect(page).to have_content("Name: Gary")

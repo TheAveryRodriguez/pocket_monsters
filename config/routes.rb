@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/trainers/new", to: "trainers#new"
   get "/trainers/:id", to: "trainers#show"
   post "/trainers", to: "trainers#create"
+  get "/trainers/:id/edit", to: "trainers#edit"
 
   get "/pocket_monsters", to: "pocket_monsters#index"
   get "/pocket_monsters/:id", to: "pocket_monsters#show"
