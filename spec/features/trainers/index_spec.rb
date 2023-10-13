@@ -34,7 +34,7 @@ RSpec.describe "trainer index page" do
     end
   end
 
-  describe "US 11 - Prent Creation" do
+  describe "US 11 - Trainer Creation" do
     describe "See and click a link to create a new trainer and taken to /trainers/new" do
       describe "See a form, fill it out with attributes, and click Create Trainer" do
         it "Post request is sent, a new trainer is created and I am redirected to the trainer index page where I see it" do
