@@ -8,6 +8,7 @@ RSpec.describe "trainer index page" do
 
     visit "/trainers"
   end
+
   describe "when i visit the trainers index" do
     it "I see the name of each trainer record in the system" do
       expect(page).to have_content("Name: #{@trainer1.name}")
@@ -17,7 +18,6 @@ RSpec.describe "trainer index page" do
 
   describe "US6 - Sorted Records" do
     it "Sorts trainers by most recently created & displays their created_at" do
-      save_and_open_page
       expect(page).to have_content("Name: #{@trainer1.name}")
       expect(page).to have_content("Name: #{@trainer2.name}")
       expect(page).to have_content("Name: #{@trainer3.name}")
