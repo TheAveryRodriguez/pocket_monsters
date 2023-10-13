@@ -33,4 +33,27 @@ RSpec.describe "trainer index page" do
       expect(page).to have_current_path("/trainers")
     end
   end
+
+  describe "US 11 - Prent Creation" do
+    describe "See and click a link to create a new trainer and taken to /trainers/new" do
+      describe "See a form, fill it out with attributes, and click Create Trainer" do
+        it "Post request is sent, a new trainer is created and I am redirected to the trainer index page where I see it" do
+          expect(page).to have_link("Create New Trainer")
+
+          click_link("Create New Trainer")
+
+          expect(page).to have_current_path("/trainers/new")
+
+          fill_in "Name", with: "Gary"
+          fill_in "Age", with: 18
+          fill_in "Leader", with: "true"
+
+          click_button "Create Trainer"
+
+          expect(page).to have_current_path("/trainers")
+          expect(page).to have_content("Name: Gary")
+        end
+      end
+    end
+  end
 end
