@@ -5,6 +5,10 @@ class Trainer < ApplicationRecord
   validates :age, presence: true
   validates :leader, presence: true
 
-  def sorted_by_creation
+  # Class methods contains self.
+  # Instance methods do not
+
+  def self.recently_created
+    order(created_at: :desc)
   end
 end
