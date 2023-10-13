@@ -23,4 +23,14 @@ RSpec.describe "trainer index page" do
       expect(page).to have_content("Name: #{@trainer3.name}")
     end
   end
+
+  describe "US 9 - Trainer Index Link" do
+    it "Every page has a link at the top of the page to the Trainers index" do
+      expect(page).to have_link("All Trainers")
+
+      click_link("All Trainers")
+
+      expect(page).to have_current_path("/trainers")
+    end
+  end
 end

@@ -23,10 +23,13 @@ RSpec.describe "pocket monsters index page" do
     end
   end
 
-  describe "US 8 - Child Index Link" do
+  describe "US 8 - PM Index Link" do
     it "Every page has a link at the top of the page to the Pocket Monsters index" do
-      save_and_open_page
       expect(page).to have_link("All Pocket Monsters")
+
+      click_link("All Pocket Monsters")
+
+      expect(page).to have_current_path("/pocket_monsters")
     end
   end
 end
