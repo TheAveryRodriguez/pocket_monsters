@@ -18,7 +18,18 @@ class TrainersController < ApplicationController
 
   def edit
     @trainer = Trainer.find(params[:id])
-    render :edit
+  end
+
+  def update
+    @trainer = Trainer.find(params[:id])
+
+    if @trainer.update(trainer_params)
+      flash[:success] = "Trainer information updated successfully."
+      redirect_to "/trainers/#{trainer.id}"
+    else
+      flash[:error] = "Trainer information not updated. Please fill out the entire form."
+      redirect_to "/trainers/#{trainer.id}/edit"
+    end
   end
 
   private
