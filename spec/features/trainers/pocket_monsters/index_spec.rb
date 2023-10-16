@@ -65,4 +65,30 @@ RSpec.describe "trainer pocket monsters index" do
       expect(page).to have_content("Name: #{@pocket_monster1.name}")
     end
   end
+
+  describe "US 18v2 - Pocket Monder Update from Index" do
+    describe "Edit links are next to every pocket monster" do
+      it "I click one I am taken to that pocket monsters edit page where I can update it" do
+        expect(page).to have_link("Update Pocket Monster #{@pocket_monster1.id}")
+        expect(page).to have_link("Update Pocket Monster #{@pocket_monster2.id}")
+        expect(page).to have_link("Update Pocket Monster #{@pocket_monster3.id}")
+
+        click_link("Update Pocket Monster #{@pocket_monster2.id}")
+
+        expect(page).to have_current_path("/pocket_monsters/#{@pocket_monster2.id}/edit")
+
+        fill_in "Name", with: "Typhlosian"
+        fill_in "Level", with: 100
+        fill_in "Captured", with: "true"
+
+        click_button "Submit"
+
+        expect(page).to have_current_path("/pocket_monsters/#{@pocket_monster2.id}")
+
+        expect(page).to have_content("Name: Typhlosian")
+        expect(page).to have_content("Level: 100")
+        expect(page).to have_content("Captured: true")
+      end
+    end
+  end
 end

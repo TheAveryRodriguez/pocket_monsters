@@ -6,6 +6,7 @@
    <h3><%= "Name: #{pocket_monster.name}" %></h3>
    <h3><%= "Level: #{pocket_monster.level}" %></h3>
    <h3><%= "Captured: #{pocket_monster.captured}" %></h3>
+   <%= link_to "Update Pocket Monster #{pocket_monster.id}", "/pocket_monsters/#{pocket_monster.id}/edit"%>
    <br>
 <% end %>
 <br>
