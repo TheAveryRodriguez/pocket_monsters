@@ -7,3 +7,5 @@
 <h3><%= "Level: #{@pocket_monster.level}" %></h3>
 <h3><%= "Captured: #{@pocket_monster.captured}" %></h3>
 <h3><%= "Trainer: #{@pocket_monster.trainer_id}" %></h3>
+<br>
+<%= link_to "Update Pocket Monster", "/pocket_monsters/#{@pocket_monster.id}/edit" %>
