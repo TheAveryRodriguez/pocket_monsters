@@ -3,5 +3,5 @@ class PocketMonster < ApplicationRecord
 
   validates :name, presence: true
   validates :level, presence: true
-  validates :captured, presence: true
+  validates :captured, presence: [true, false]
 end

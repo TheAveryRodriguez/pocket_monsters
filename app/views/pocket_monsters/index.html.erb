@@ -4,9 +4,12 @@
 <h1>Pocket Monsters Index Page</h1>
 
 <% @pocket_monsters.each do |pocket_monster|%>
-   <h3><%= "Name: #{pocket_monster.name}" %></h3>
-   <h3><%= "Level: #{pocket_monster.level}" %></h3>
-   <h3><%= "Captured: #{pocket_monster.captured}" %></h3>
-   <h3><%= "Trainer: #{pocket_monster.trainer_id}" %></h3>
-   <br>
+
+   <% if pocket_monster.captured == true %>
+      <h3><%= "Name: #{pocket_monster.name}" %></h3>
+      <h3><%= "Level: #{pocket_monster.level}" %></h3>
+      <h3><%= "Captured: #{pocket_monster.captured}" %></h3>
+      <h3><%= "Trainer: #{pocket_monster.trainer_id}" %></h3>
+      <br>
+   <% end %>
 <% end %>
