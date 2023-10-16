@@ -42,7 +42,6 @@ RSpec.describe "trainer show" do
     describe "See and click a link to update trainer and taken to /trainers/:id/edit" do
       describe "See a form to edit the trainer, fill out the attributes, and click Update" do
         it "PATCH request is sent to '/trainers/:id', trainer is updated, and I am redirected to the trainers show page where I see the updated info" do
-          save_and_open_page
           expect(page).to have_content("Name: #{@trainer1.name}")
           expect(page).to have_content("Age: #{@trainer1.age}")
           expect(page).to have_content("Leader: #{@trainer1.leader}")

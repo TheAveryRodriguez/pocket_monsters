@@ -28,12 +28,11 @@ RSpec.describe "trainer pocket monsters index" do
     describe "See and click a link to create a new trainer pocket monster and taken to /trainers/:id/pocket_monsters/new" do
       describe "See a form, fill it out with attributes, and click Create Pocket Monster" do
         it "Post request is sent to '/trainers/:id/pocket_monsters', a new pocket_monster is created for that parent and I am redirected to the trainer pocket monster index page where I see it" do
-          save_and_open_page
           expect(page).to have_link("Create Pocket Monster")
 
           click_link("Create Pocket Monster")
 
-          expect(page).to have_current_path("/trainers/:id/pocket_monsters/new")
+          expect(page).to have_current_path("/trainers/#{@trainer1.id}/pocket_monsters/new")
 
           fill_in "Name", with: "Mewtwo"
           fill_in "Level", with: 101

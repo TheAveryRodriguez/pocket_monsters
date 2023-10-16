@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   get "/pocket_monsters/:id", to: "pocket_monsters#show"
 
   get "/trainers/:id/pocket_monsters", to: "trainer_pocket_monsters#index"
-  get "/trainers/:trainer_id/pocket_monsters/new", to: "trainer_pocket_monsters#new"
-  post "/trainers/:trainer_id/pocket_monsters", to: "trainer_pocket_monsters#create"
+  get "/trainers/:id/pocket_monsters/new", to: "trainer_pocket_monsters#new"
+  post "/trainers/:id/pocket_monsters", to: "trainer_pocket_monsters#create"
 end

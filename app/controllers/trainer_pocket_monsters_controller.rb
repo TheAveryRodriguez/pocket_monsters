@@ -10,7 +10,7 @@ class TrainerPocketMonstersController < ApplicationController
 
   def create
     @trainer = Trainer.find(params[:id])
-    @pocket_monster = PocketMonster.create(pm_params)
+    @pocket_monster = @trainer.pocket_monsters.create(pm_params)
 
     redirect_to "/trainers/#{@trainer.id}/pocket_monsters"
   end
@@ -18,6 +18,6 @@ class TrainerPocketMonstersController < ApplicationController
   private
 
   def pm_params
-    params.permit(:id, :name, :level, :captured)
+    params.permit(:id, :name, :level, :captured, :trainer_id)
   end
 end
