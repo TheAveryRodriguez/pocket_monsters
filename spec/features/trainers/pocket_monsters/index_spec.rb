@@ -6,6 +6,7 @@ RSpec.describe "trainer pocket monsters index" do
     @pocket_monster1 = PocketMonster.create(name: "Pikachu", level: 100, captured: true, trainer_id: @trainer1.id)
     @pocket_monster2 = PocketMonster.create(name: "Charizard", level: 99, captured: true, trainer_id: @trainer1.id)
     @pocket_monster3 = PocketMonster.create(name: "Greninja", level: 98, captured: true)
+    @pocket_monster4 = PocketMonster.create(name: "Mew", level: 1, captured: true, trainer_id: @trainer1.id)
 
     visit "/trainers/#{@trainer1.id}/pocket_monsters"
   end
@@ -47,6 +48,21 @@ RSpec.describe "trainer pocket monsters index" do
           expect(page).to have_content("Captured: true")
         end
       end
+    end
+  end
+
+  describe "US 16 - Sort Trainer PM in alphabetical order" do
+    xit "See and click a link to sort children in alphabetical order" do
+      save_and_open_page
+      expect(page).to have_link("Sort Pocket Monsters")
+
+      click_link("Sort Pocket Monsters")
+
+      expect(page).to have_current_path("/trainers/#{@trainer1.id}/pocket_monsters")
+
+      expect(page).to have_content("Name: #{@pocket_monster2.name}")
+      expect(page).to have_content("Name: #{@pocket_monster4.name}")
+      expect(page).to have_content("Name: #{@pocket_monster1.name}")
     end
   end
 end

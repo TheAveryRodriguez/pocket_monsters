@@ -1,6 +1,7 @@
 class TrainerPocketMonstersController < ApplicationController
   def index
     @trainer = Trainer.find(params[:id])
+    # Call alphabetical_monsters method here
   end
 
   def new

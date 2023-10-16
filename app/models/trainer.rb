@@ -15,4 +15,8 @@ class Trainer < ApplicationRecord
   def monsters_count
     pocket_monsters.count
   end
+
+  def alphabetical_monsters
+    # alphabatize children in order
+  end
 end

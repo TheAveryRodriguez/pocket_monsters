@@ -4,6 +4,8 @@
 
 <% @trainers.recently_created.each do |trainer| %>
    <h3><%= "Name: #{trainer.name}" %></h3>
+   <%= link_to "Update Trainer #{trainer.id}", "/trainers/#{trainer.id}/edit"%>
+<br>
 <% end %>
 <br>
 <%= link_to "Create New Trainer", "/trainers/new" %>

@@ -56,4 +56,30 @@ RSpec.describe "trainer index page" do
       end
     end
   end
+
+  describe "US 17 - Trainer Update from Index" do
+    describe "Edit links are next to every trainer" do
+      it "I click one I am taken to that trainers edit page where I can update it" do
+        expect(page).to have_link("Update Trainer #{@trainer1.id}")
+        expect(page).to have_link("Update Trainer #{@trainer2.id}")
+        expect(page).to have_link("Update Trainer #{@trainer3.id}")
+
+        click_link("Update Trainer #{@trainer2.id}")
+
+        expect(page).to have_current_path("/trainers/#{@trainer2.id}/edit")
+
+        fill_in "Name", with: "Azul"
+        fill_in "Age", with: 38
+        fill_in "Leader", with: "true"
+
+        click_button "Submit"
+
+        expect(page).to have_current_path("/trainers/#{@trainer2.id}")
+
+        expect(page).to have_content("Name: Azul")
+        expect(page).to have_content("Age: 38")
+        expect(page).to have_content("Leader: true")
+      end
+    end
+  end
 end
