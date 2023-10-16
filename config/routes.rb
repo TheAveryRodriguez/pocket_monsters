@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get "/pocket_monsters", to: "pocket_monsters#index"
   get "/pocket_monsters/:id", to: "pocket_monsters#show"
+  get "/pocket_monsters/:id/edit", to: "pocket_monsters#edit"
+  patch "/pocket_monsters/:id", to: "pocket_monsters#update"
 
   get "/trainers/:id/pocket_monsters", to: "trainer_pocket_monsters#index"
   get "/trainers/:id/pocket_monsters/new", to: "trainer_pocket_monsters#new"
