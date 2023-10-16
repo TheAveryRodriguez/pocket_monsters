@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.12.3/application.js' type='text/javascript'></script>
     <link href='./assets/0.12.3/application.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_yellow.png" />
     <link rel="icon" type="image/png" href="./assets/0.12.3/favicon.png" />
   </head>
 
@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-10-14T22:30:00-05:00">2023-10-14T22:30:00-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-10-16T09:10:39-05:00">2023-10-16T09:10:39-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,15 +22,15 @@
   <h2>
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
-      <span class="green">
-  92.77%
+      <span class="yellow">
+  87.74%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.94
+         0.95
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>16</b> files in total.
+    <b>17</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>83</b> relevant lines,
-    <span class="green"><b>77</b> lines covered</span> and
-    <span class="red"><b>6</b> lines missed. </span>
-    (<span class="green">
-  92.77%
+    <b>106</b> relevant lines,
+    <span class="green"><b>93</b> lines covered</span> and
+    <span class="red"><b>13</b> lines missed. </span>
+    (<span class="yellow">
+  87.74%
 </span>
 )
   </div>
@@ -83,12 +83,23 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#5d3e48f244c0a58ea213c4eb89f74f5319b13eb3" class="src_link" title="app/controllers/trainer_pocket_monsters_controller.rb">app/controllers/trainer_pocket_monsters_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">66.67 %</td>
+            <td class="red strong cell--number t-file__coverage">53.85 %</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">13</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">0.54</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#49093e1a9d8e7d1f396573e0e5617534a0235885" class="src_link" title="app/controllers/trainers_controller.rb">app/controllers/trainers_controller.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">72.73 %</td>
+            <td class="cell--number">40</td>
             <td class="cell--number">22</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">0.75</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">0.91</td>
             
           </tr>
         
@@ -127,12 +138,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#236d1fdd185a0c2cb9a097dbb87fe6e14698e815" class="src_link" title="app/models/trainer.rb">app/models/trainer.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">77.78 %</td>
+            <td class="yellow strong cell--number t-file__coverage">88.89 %</td>
             <td class="cell--number">18</td>
             <td class="cell--number">9</td>
-            <td class="cell--number">7</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">0.78</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">1.33</td>
             
           </tr>
         
@@ -321,7 +332,7 @@
     <h3>app/controllers/trainer_pocket_monsters_controller.rb</h3>
     <h4>
       <span class="red">
-  66.67%
+  53.85%
 </span>
 
       lines covered
@@ -330,9 +341,9 @@
     
 
     <div class="t-line-summary">
-      <b>12</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <b>13</b> relevant lines.
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
 
     
@@ -365,8 +376,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="3">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
             
 
             
@@ -409,8 +420,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="7">
+            
             
 
             
@@ -470,7 +481,291 @@
 
             
 
+            <code class="ruby">    @trainer = Trainer.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="13">
+            
+            
+
+            
+
             <code class="ruby">    @pocket_monster = PocketMonster.create(pm_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">    redirect_to &quot;/trainers/#{@trainer.id}/pocket_monsters&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def pm_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">    params.permit(:id, :name, :level, :captured)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="49093e1a9d8e7d1f396573e0e5617534a0235885">
+  <div class="header">
+    <h3>app/controllers/trainers_controller.rb</h3>
+    <h4>
+      <span class="red">
+  72.73%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>22</b> relevant lines.
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>6</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class TrainersController &lt; ApplicationController</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def index</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby">    @trainers = Trainer.all</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def show</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="5" data-linenumber="7">
+            <span class="hits">5</span>
+            
+
+            
+
+            <code class="ruby">    @trainer = Trainer.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">    render :new</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -486,46 +781,46 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="14">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    redirect_to &quot;/trainers/#{trainer.id}/pocket_monsters&quot;</code>
+            
+
+            <code class="ruby">  def create</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="missed" data-hits="0" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">    @trainer = Trainer.create(trainer_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">    redirect_to &quot;/trainers&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
             
 
             <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  private</code>
           </li>
         </div>
       
@@ -547,18 +842,18 @@
 
             
 
-            <code class="ruby">  def pm_params</code>
+            <code class="ruby">  def edit</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="20">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    params.permit(:id, :name, :level, :captured)</code>
+            
+
+            <code class="ruby">    @trainer = Trainer.find(params[:id])</code>
           </li>
         </div>
       
@@ -575,6 +870,204 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def update</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @trainer = Trainer.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    if @trainer.update(trainer_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      flash[:success] = &quot;Trainer information updated successfully.&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="28">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      redirect_to &quot;/trainers/#{@trainer.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">      flash[:error] = &quot;Trainer information not updated. Please fill out the entire form.&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">      redirect_to &quot;/trainers/#{@trainer.id}/edit&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="35">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def trainer_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    params.permit(:id, :name, :age, :leader)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="39">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 
@@ -818,8 +1311,8 @@
   <div class="header">
     <h3>app/models/trainer.rb</h3>
     <h4>
-      <span class="red">
-  77.78%
+      <span class="yellow">
+  88.89%
 </span>
 
       lines covered
@@ -829,8 +1322,8 @@
 
     <div class="t-line-summary">
       <b>9</b> relevant lines.
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
 
     
@@ -1006,8 +1499,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="16">
-            
+          <li class="covered" data-hits="5" data-linenumber="16">
+            <span class="hits">5</span>
             
 
             
@@ -3423,7 +3916,7 @@
 
             
 
-            <code class="ruby">  patch &quot;/trainers/:id/&quot;, to: &quot;trainers#update&quot;</code>
+            <code class="ruby">  patch &quot;/trainers/:id&quot;, to: &quot;trainers#update&quot;</code>
           </li>
         </div>
       
@@ -3489,7 +3982,7 @@
 
             
 
-            <code class="ruby">  get &quot;/trainers/:id/pocket_monsters/new&quot;, to: &quot;trainer_pocket_monsters#new&quot;</code>
+            <code class="ruby">  get &quot;/trainers/:trainer_id/pocket_monsters/new&quot;, to: &quot;trainer_pocket_monsters#new&quot;</code>
           </li>
         </div>
       
@@ -3500,7 +3993,7 @@
 
             
 
-            <code class="ruby">  post &quot;/trainers/:id/pocket_monsters&quot;, to: &quot;trainer_pocket_monsters#create&quot;</code>
+            <code class="ruby">  post &quot;/trainers/:trainer_id/pocket_monsters&quot;, to: &quot;trainer_pocket_monsters#create&quot;</code>
           </li>
         </div>
       
