@@ -11,4 +11,6 @@
 <br>
 <%= link_to "Update Trainer", "/trainers/#{@trainer.id}/edit" %>
 <br>
+<%= link_to "Delete Trainer", "/trainers/#{@trainer.id}", method: :delete%>
+<br>
 <%= link_to "This trainer's pocket monsters", "/trainers/#{@trainer.id}/pocket_monsters" %>

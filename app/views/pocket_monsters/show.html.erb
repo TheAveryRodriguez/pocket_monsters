@@ -9,3 +9,5 @@
 <h3><%= "Trainer: #{@pocket_monster.trainer_id}" %></h3>
 <br>
 <%= link_to "Update Pocket Monster", "/pocket_monsters/#{@pocket_monster.id}/edit" %>
+<br>
+<%= link_to "Delete Pocket Monster", "/pocket_monsters/#{@pocket_monster.id}", method: :delete%>

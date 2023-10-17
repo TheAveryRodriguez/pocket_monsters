@@ -48,4 +48,19 @@ RSpec.describe "pocket monster show" do
       end
     end
   end
+
+  describe "US 20 - Child Delete" do
+    describe "link to delete a pocket monster, click it, pocket monster is deleted" do
+      it "redirected back to index and no longer see that trainer" do
+        expect(page).to have_link("Delete Pocket Monster")
+
+        click_link("Delete Pocket Monster")
+
+        expect(page).to have_current_path("/pocket_monsters")
+
+        expect(page).to have_no_content("Name: #{@pocket_monster1.name}")
+        expect(page).to have_content("Name: #{@pocket_monster2.name}")
+      end
+    end
+  end
 end

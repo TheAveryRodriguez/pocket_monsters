@@ -23,6 +23,12 @@ class PocketMonstersController < ApplicationController
     end
   end
 
+  def destroy
+    @pocket_monster = PocketMonster.find(params[:id])
+    @pocket_monster.destroy
+    redirect_to "/pocket_monsters"
+  end
+
   private
 
   def pm_params

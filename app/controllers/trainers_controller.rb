@@ -32,6 +32,12 @@ class TrainersController < ApplicationController
     end
   end
 
+  def destroy
+    @trainer = Trainer.find(params[:id])
+    @trainer.destroy
+    redirect_to "/trainers"
+  end
+
   private
 
   def trainer_params
