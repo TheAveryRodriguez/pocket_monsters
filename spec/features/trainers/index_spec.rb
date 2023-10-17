@@ -82,4 +82,22 @@ RSpec.describe "trainer index page" do
       end
     end
   end
+
+  describe "US 22 - Parent Delete" do
+    describe "Next to every parent is a link to delete that parent" do
+      it "click link, returned to index page and no longer see that parent" do
+        expect(page).to have_link("Delete Trainer #{@trainer1.id}")
+        expect(page).to have_link("Delete Trainer #{@trainer2.id}")
+        expect(page).to have_link("Delete Trainer #{@trainer3.id}")
+
+        click_link("Delete Trainer #{@trainer2.id}")
+
+        expect(page).to have_current_path("/trainers")
+
+        expect(page).to have_content("Name: #{@trainer1.name}")
+        expect(page).to have_no_content("Name: #{@trainer2.name}")
+        expect(page).to have_content("Name: #{@trainer3.name}")
+      end
+    end
+  end
 end

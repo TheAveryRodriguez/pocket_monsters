@@ -91,4 +91,9 @@ RSpec.describe "trainer pocket monsters index" do
       end
     end
   end
+
+  describe "US 21 - Display Records over a given threshold" do
+    xit "" do
+    end
+  end
 end
