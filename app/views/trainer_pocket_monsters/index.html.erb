@@ -12,6 +12,14 @@
    <br>
 <% end %>
 <br>
+
+<%= form_with url: "/trainers/#{@trainer.id}/pocket_monsters?sort=level", method: :get, local: true do |f|%>
+   <%= f.label :level, "Only return records stronger than" %>
+   <%= f.text_field :level, placeholder: "Enter monster level" %>
+   <%= f.submit "Monster level" %>
+<% end %>
+<br>
+
 <%= link_to "Create Pocket Monster", "/trainers/#{@trainer.id}/pocket_monsters/new" %>
 <br>
 <%= link_to "Sort Pocket Monsters", "/trainers/#{@trainer.id}/pocket_monsters?sort=asc" %>

@@ -19,4 +19,7 @@ class Trainer < ApplicationRecord
   def alphabetical_monsters
     pocket_monsters.order(:name)
   end
+
+  def stronger_than(params[:level])
+  end
 end

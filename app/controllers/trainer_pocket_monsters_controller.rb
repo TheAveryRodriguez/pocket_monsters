@@ -1,9 +1,13 @@
 class TrainerPocketMonstersController < ApplicationController
   def index
     @trainer = Trainer.find(params[:id])
-    @pocket_monsters = @trainer.pocket_monsters
-    if params[:sort] == "asc"
-      @pocket_monsters = @trainer.alphabetical_monsters
+    # @pocket_monsters = @trainer.pocket_monsters
+    @pocket_monsters = if params[:sort] == "asc"
+      @trainer.alphabetical_monsters
+    elsif !params[:level].nil?
+      @trainer.stronger_than(params[:level])
+    else
+      @trainer.pocket_monsters
     end
   end
 
