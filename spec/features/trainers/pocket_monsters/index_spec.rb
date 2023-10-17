@@ -96,4 +96,22 @@ RSpec.describe "trainer pocket monsters index" do
     xit "" do
     end
   end
+
+  describe "US 23v2 - Child Delete" do
+    describe "Next to every child is a link to delete that child" do
+      xit "click link, returned to index page and no longer see that child" do
+        expect(page).to have_link("Delete Pocket Monster #{@pocket_monster1.id}")
+        expect(page).to have_link("Delete Pocket Monster #{@pocket_monster2.id}")
+        expect(page).to have_link("Delete Pocket Monster #{@pocket_monster4.id}")
+
+        click_link("Delete Pocket Monster #{@pocket_monster2.id}")
+
+        expect(page).to have_current_path("/trainers/#{@trainer1.id}/pocket_monsters")
+
+        expect(page).to have_content("Name: #{@pocket_monster1.name}")
+        expect(page).to have_no_content("Name: #{@pocket_monster2.name}")
+        expect(page).to have_content("Name: #{@pocket_monster4.name}")
+      end
+    end
+  end
 end

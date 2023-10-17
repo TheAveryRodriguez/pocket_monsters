@@ -16,6 +16,14 @@ class TrainerPocketMonstersController < ApplicationController
     redirect_to "/trainers/#{@trainer.id}/pocket_monsters"
   end
 
+  def destroy
+    @trainer = Trainer.find(params[:id])
+    @pocket_monster = @trainer.pocket_monsters.find(pm_params)
+    @pocket_monster.destroy
+
+    redirect_to "/trainers/#{@trainer.id}/pocket_monsters"
+  end
+
   private
 
   def pm_params
