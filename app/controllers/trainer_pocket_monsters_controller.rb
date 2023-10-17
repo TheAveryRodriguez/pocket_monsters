@@ -17,11 +17,10 @@ class TrainerPocketMonstersController < ApplicationController
   end
 
   def destroy
-    @trainer = Trainer.find(params[:id])
-    @pocket_monster = @trainer.pocket_monsters.find(pm_params)
+    @pocket_monster = PocketMonster.find(params[:id])
     @pocket_monster.destroy
 
-    redirect_to "/trainers/#{@trainer.id}/pocket_monsters"
+    redirect_to "/pocket_monsters"
   end
 
   private
