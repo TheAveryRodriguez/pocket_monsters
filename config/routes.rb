@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get "/trainers/:id/pocket_monsters", to: "trainer_pocket_monsters#index"
   get "/trainers/:id/pocket_monsters/new", to: "trainer_pocket_monsters#new"
   post "/trainers/:id/pocket_monsters", to: "trainer_pocket_monsters#create"
+  delete "/trainers/:id/pocket_monsters/:id", to: "trainer_pocket_monsters#destroy"
 end
