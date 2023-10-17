@@ -1,5 +1,5 @@
 class Trainer < ApplicationRecord
-  has_many :pocket_monsters
+  has_many :pocket_monsters, dependent: :destroy
 
   validates :name, presence: true
   validates :age, presence: true

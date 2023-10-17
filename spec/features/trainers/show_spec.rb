@@ -70,8 +70,7 @@ RSpec.describe "trainer show" do
 
   describe "US 19 - Parent Delete" do
     describe "link to delete a trainer, click it, trainer is deleted and all child records are deleted" do
-      xit "redirected back to index and no longer see that trainer" do
-        save_and_open_page
+      it "redirected back to index and no longer see that trainer" do
         expect(page).to have_link("Delete Trainer")
 
         click_link("Delete Trainer")
