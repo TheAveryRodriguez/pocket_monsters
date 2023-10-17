@@ -17,6 +17,6 @@ class Trainer < ApplicationRecord
   end
 
   def alphabetical_monsters
-    # alphabatize children in order
+    pocket_monsters.order(:name)
   end
 end

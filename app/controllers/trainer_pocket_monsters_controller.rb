@@ -1,7 +1,10 @@
 class TrainerPocketMonstersController < ApplicationController
   def index
     @trainer = Trainer.find(params[:id])
-    # Call alphabetical_monsters method here
+    @pocket_monsters = @trainer.pocket_monsters
+    if params[:sort] == "asc"
+      @pocket_monsters = @trainer.alphabetical_monsters
+    end
   end
 
   def new

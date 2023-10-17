@@ -2,7 +2,7 @@
 
 <h1>Trainer's Pocket Monsters Index</h1>
 
-<% @trainer.pocket_monsters.each do |pocket_monster|%>
+<% @pocket_monsters.each do |pocket_monster|%>
    <h3><%= "Name: #{pocket_monster.name}" %></h3>
    <h3><%= "Level: #{pocket_monster.level}" %></h3>
    <h3><%= "Captured: #{pocket_monster.captured}" %></h3>
@@ -14,4 +14,4 @@
 <br>
 <%= link_to "Create Pocket Monster", "/trainers/#{@trainer.id}/pocket_monsters/new" %>
 <br>
-<%= link_to "Sort Pocket Monsters", "/trainers/#{@trainer.id}/pocket_monsters" %>
+<%= link_to "Sort Pocket Monsters", "/trainers/#{@trainer.id}/pocket_monsters?sort=asc" %>

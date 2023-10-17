@@ -52,17 +52,15 @@ RSpec.describe "trainer pocket monsters index" do
   end
 
   describe "US 16 - Sort Trainer PM in alphabetical order" do
-    xit "See and click a link to sort children in alphabetical order" do
-      save_and_open_page
+    it "See and click a link to sort children in alphabetical order" do
       expect(page).to have_link("Sort Pocket Monsters")
 
       click_link("Sort Pocket Monsters")
+      save_and_open_page
+      expect(page).to have_current_path("/trainers/#{@trainer1.id}/pocket_monsters?sort=asc")
 
-      expect(page).to have_current_path("/trainers/#{@trainer1.id}/pocket_monsters")
-
-      expect(page).to have_content("Name: #{@pocket_monster2.name}")
-      expect(page).to have_content("Name: #{@pocket_monster4.name}")
-      expect(page).to have_content("Name: #{@pocket_monster1.name}")
+      expect("Name: #{@pocket_monster2.name}").to appear_before("Name: #{@pocket_monster4.name}")
+      expect("Name: #{@pocket_monster4.name}").to appear_before("Name: #{@pocket_monster1.name}")
     end
   end
 
