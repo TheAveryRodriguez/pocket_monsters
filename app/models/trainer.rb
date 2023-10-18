@@ -20,6 +20,7 @@ class Trainer < ApplicationRecord
     pocket_monsters.order(:name)
   end
 
-  # def stronger_than([:level])
-  # end
+  def stronger_than(threshold)
+    pocket_monsters.where("level > ?", threshold)
+  end
 end

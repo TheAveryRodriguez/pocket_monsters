@@ -56,7 +56,7 @@ RSpec.describe "trainer pocket monsters index" do
       expect(page).to have_link("Sort Pocket Monsters")
 
       click_link("Sort Pocket Monsters")
-      save_and_open_page
+
       expect(page).to have_current_path("/trainers/#{@trainer1.id}/pocket_monsters?sort=asc")
 
       expect("Name: #{@pocket_monster2.name}").to appear_before("Name: #{@pocket_monster4.name}")
@@ -91,7 +91,25 @@ RSpec.describe "trainer pocket monsters index" do
   end
 
   describe "US 21 - Display Records over a given threshold" do
-    xit "" do
+    describe "when i visit the trainer pocket monster index I see a form that allows me to input a number value" do
+      describe "I fill it in and hit submit and I am brought back to the index " do
+        it "Displays the records that meet that threshold" do
+          expect(page).to have_current_path("/trainers/#{@trainer1.id}/pocket_monsters")
+
+          expect(page).to have_content("Only return records stronger than")
+          expect(page).to have_button
+
+          fill_in "Enter monster strength", with: 98
+
+          click_button "Monster level"
+
+          expect(page).to have_content("Name: #{@pocket_monster1.name}")
+          expect(page).to have_content("Name: #{@pocket_monster2.name}")
+
+          expect(page).to have_no_content("Name: #{@pocket_monster3.name}")
+          expect(page).to have_no_content("Name: #{@pocket_monster4.name}")
+        end
+      end
     end
   end
 

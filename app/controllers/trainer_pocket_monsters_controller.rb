@@ -4,8 +4,8 @@ class TrainerPocketMonstersController < ApplicationController
     # @pocket_monsters = @trainer.pocket_monsters
     @pocket_monsters = if params[:sort] == "asc"
       @trainer.alphabetical_monsters
-    elsif !params[:level].nil?
-      @trainer.stronger_than(params[:level])
+    elsif !params[:strength].nil?
+      @trainer.stronger_than(params[:strength])
     else
       @trainer.pocket_monsters
     end

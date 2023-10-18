@@ -13,9 +13,10 @@
 <% end %>
 <br>
 
-<%= form_with url: "/trainers/#{@trainer.id}/pocket_monsters?sort=level", method: :get, local: true do |f|%>
-   <%= f.label :level, "Only return records stronger than" %>
-   <%= f.text_field :level, placeholder: "Enter monster level" %>
+<%# Include data turbo false %>
+<%= form_with url: "/trainers/#{@trainer.id}/pocket_monsters?sort=strength", method: :get, local: true do |f|%>
+   <%= f.label :strength, "Only return records stronger than" %>
+   <%= f.text_field :strength, placeholder: "Enter monster strength" %>
    <%= f.submit "Monster level" %>
 <% end %>
 <br>
